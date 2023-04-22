@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="balance-box">
+          <p class="my-balance">My balance</p>
+          <strong class="balance">$921.48</strong>
+        </div>
+        <div class="logo-box">
+          <svg
+            width="72"
+            height="48"
+            viewBox="0 0 72 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="none" fill-rule="evenodd">
+              <circle fill="#382314" cx="48" cy="24" r="24" />
+              <circle stroke="#FFF" stroke-width="2" cx="24" cy="24" r="23" />
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="content">
+        <span class="spending"> Spending - Last 7 days</span>
+        <div class="chart-box">
+          <div class="chart">
+            <div class="chart-column"></div>
+            <span class="chart-day" id="mon"></span>
+          </div>
+          <div class="chart">
+            <div class="chart-column"></div>
+            <span class="chart-day" id="tue"></span>
+          </div>
+          <div class="chart">
+            <div class="chart-column"></div>
+            <span class="chart-day" id="wed"></span>
+          </div>
+          <div class="chart">
+            <div class="chart-column"></div>
+            <span class="chart-day" id="thu"></span>
+          </div>
+          <div class="chart">
+            <div class="chart-column"></div>
+            <span class="chart-day" id="fri"></span>
+          </div>
+          <div class="chart">
+            <div class="chart-column"></div>
+            <span class="chart-day" id="sat"></span>
+          </div>
+          <div class="chart">
+            <div class="chart-column"></div>
+            <span class="chart-day" id="sun"></span>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="total-data">
+            <p class="total-text">Total this month</p>
+            <span class="total-value">$478.33</span>
+          </div>
+          <div class="last-month-data">
+            <p class="last-procent">+2.4%</p>
+            <span class="last-text">from last month</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
