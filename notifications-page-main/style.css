@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: hsl(210, 60%, 98%);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 5% auto;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.notifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.notifications span {
+  padding: 0.6rem 1.2rem;
+  border-radius: 11px;
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(0, 0%, 100%);
+}
+
+.as-read {
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  color: hsl(219, 12%, 42%);
+}
+
+.as-read:hover,
+.as-read:active {
+  transition: all 0.3s;
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.message-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: scroll;
+  height: 60rem;
+}
+
+.message {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 2rem;
+  border-radius: 14px;
+}
+
+.as-read-message {
+  background-color: #fff !important;
+}
+
+.un-read-message {
+  background-color: hsl(211, 68%, 94%);
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  padding-bottom: 1rem;
+}
+
+.text-box {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.text {
+  color: hsl(219, 12%, 42%);
+}
+
+.weight-text {
+  font-weight: 800;
+}
+
+.time {
+  color: hsl(219, 14%, 63%);
+}
+
+.weight-text::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: hsl(1, 90%, 64%);
+}
+
+.Chess-Club {
+  color: hsl(219, 85%, 26%);
+}
+
+.private-message {
+  color: hsl(219, 12%, 42%);
+  line-height: 1.4;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 1px solid hsl(219, 14%, 63%);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.space {
+  margin-bottom: 2rem;
+}
+
+.name {
+  color: #111;
+}
+
+@media (max-width: 24em) {
+  .notifications h1 {
+    font-size: 2.4rem;
+  }
+
+  .notifications {
+    gap: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .name{
+    font-size: 1.4rem;
+  }
+  .text{
+    font-size: 1.4rem;
+  }
+}
