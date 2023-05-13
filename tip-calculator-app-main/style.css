@@ -1,0 +1,283 @@
+/*
+## Colors
+
+### Primary
+
+- Strong cyan: hsl(172, 67%, 45%)
+
+### Neutral
+
+- Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: hsl(185, 41%, 84%)
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl(0, 0%, 100%)
+
+## Typography
+
+### Body Copy
+
+- Font size (form inputs): 24px
+
+### Font
+
+- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
+- Weights: 700
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-size: 1.6rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Space Mono", monospace;
+  background-color: hsl(185, 41%, 84%);
+}
+
+.logo {
+  position: absolute;
+  top: 150px;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 10rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.calc-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bill-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.text {
+  font-size: 0.6rem;
+  color: hsl(186, 14%, 43%);
+}
+
+.bill-input {
+  background-color: hsl(189, 41%, 97%);
+  border: hsl(189, 41%, 97%);
+  height: 1.4rem;
+  width: 100%;
+  padding: 8px;
+  font-size: 0.8rem;
+  outline-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  font-family: "Space Mono", monospace;
+  border-radius: 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bill-input::placeholder {
+  font-family: "Space Mono", monospace;
+  color: hsl(184, 14%, 56%);
+  text-align: right;
+}
+
+.bill-input:not(:placeholder-shown) {
+  background-image: none;
+}
+
+/* .bill-input{
+  background-image: url(images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position:  left;
+} */
+
+.tip-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tip-button-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.5rem;
+  row-gap: 0.5rem;
+}
+
+.tip-button {
+  font-family: "Space Mono", monospace;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(183, 100%, 15%);
+  border: hsl(183, 100%, 15%);
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  border-radius: 5px;
+}
+
+.tip-button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  border: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+
+.custom-button {
+  font-family: "Space Mono", monospace;
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(189, 41%, 97%);
+  border: hsl(189, 41%, 97%);
+  outline-color: hsl(172, 67%, 45%);
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 5px;
+  max-width: 4rem;
+  font-size: 0.6rem;
+}
+
+.custom-button::placeholder {
+  font-size: 0.6rem;
+  color: hsl(183, 100%, 15%);
+}
+
+.number-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.people-input {
+  background-color: hsl(189, 41%, 97%);
+  border: hsl(189, 41%, 97%);
+  height: 1.4rem;
+  width: 100%;
+  padding: 8px;
+  font-size: 0.8rem;
+  color: hsl(183, 100%, 15%);
+  outline-color: hsl(172, 67%, 45%);
+  font-family: "Space Mono", monospace;
+  border-radius: 4px;
+}
+
+.people-input::placeholder {
+  font-family: "Space Mono", monospace;
+  color: hsl(184, 14%, 56%);
+  text-align: right;
+}
+
+.result-box {
+  background-color: hsl(183, 100%, 15%);
+  padding: 1.4rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  width: 13rem;
+}
+
+.amount {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  padding-bottom: 1rem;
+}
+
+.amount-text p,
+.total-text p {
+  color: hsl(189, 41%, 97%);
+  font-size: 0.6rem;
+}
+
+.amount-text span,
+.total-text span {
+  font-size: 0.5rem;
+  color: hsl(184, 14%, 56%);
+}
+
+.result-tip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#tip-result,
+#total-result {
+  color: hsl(172, 67%, 45%);
+  font-size: 1.4rem;
+}
+
+.reset-button {
+  background-color: hsl(186, 14%, 43%);
+  border: none;
+  color: hsl(183, 100%, 15%);
+  font-size: 0.6rem;
+  padding: 0.5rem;
+  font-weight: 700;
+  border-radius: 11px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.reset-button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  cursor: pointer;
+}
+
+.button-selected {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.information-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bill-error,
+.people-error {
+  display: none;
+  font-size: 0.7rem;
+  color: rgb(228, 19, 19);
+}
+
+/* queries */
+@media (max-width: 24em) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem !important;
+    margin: 5rem auto;
+  }
+  .logo {
+    position: absolute;
+    top: 45px;
+  }
+  .result-box {
+    gap: 0rem;
+  }
+}
