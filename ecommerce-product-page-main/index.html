@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce page</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- LINK SWIPER -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="">
+      <img src="images/logo.svg" alt="logo" class="logo" />
+      <button class="btn-mobile-nav">
+        <img src="images/icon-menu.svg" class="icon-mobile-nav-open" />
+        <img src="images/icon-close.svg" class="icon-mobile-nav-close" />
+      </button>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item">Collections</li>
+          <li class="nav-list-item">Men</li>
+          <li class="nav-list-item">Women</li>
+          <li class="nav-list-item">About</li>
+          <li class="nav-list-item">Contact</li>
+        </ul>
+      </nav>
+      <div class="user-account">
+        <div class="card-container">
+          <button class="cart-btn">
+            <span class="indicator hidden"></span>
+            <img src="images/icon-cart.svg" alt="cart" class="cart" />
+          </button>
+          <div class="product-cart hidden">
+            <div class="cart-name">
+              <span>Cart</span>
+            </div>
+            <div class="product-box">
+              <div class="product">
+                <span class="empty-product">Your cart is empty.</span>
+                <!-- <div class="product-content">
+                  <img src="images/image-product-1.jpg" class="cart-img" />
+                  <div class="product-text">
+                    <span>Fall Limited Edition Sneakers</span>
+                    <span>$125.00 x 3 <strong>$375.00</strong></span>
+                  </div>
+                  <img src="images/icon-delete.svg" class="del-btn" />
+                </div>
+                <button class="checkout-btn">Checkout</button> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user-box">
+          <img src="images/image-avatar.png" alt="user" class="user" />
+        </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <section class="section-slider">
+        <!-- MAIN SWIPER CONTENT -->
+        <swiper-container
+          style="
+            --swiper-navigation-color: #fff;
+            --swiper-pagination-color: #fff;
+          "
+          class="mySwiper"
+          thumbs-swiper=".mySwiper2"
+          space-between="10"
+          navigation="false"
+          id="largeImg"
+        >
+          <swiper-slide>
+            <img src="images/image-product-1.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/image-product-2.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/image-product-3.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/image-product-4.jpg" />
+          </swiper-slide>
+        </swiper-container>
+
+        <!-- BOTTOM SWPIER CONTENT -->
+        <swiper-container
+          class="mySwiper2"
+          space-between="20"
+          slides-per-view="4"
+          free-mode="true"
+          watch-slides-progress="true"
+        >
+          <swiper-slide>
+            <img src="images/image-product-1-thumbnail.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/image-product-2-thumbnail.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/image-product-3-thumbnail.jpg" />
+          </swiper-slide>
+          <swiper-slide>
+            <img src="images/image-product-4-thumbnail.jpg" />
+          </swiper-slide>
+        </swiper-container>
+        <!-- MOBILE SLIDER -->
+        <div class="slider-mobile">
+          <div class="slide-mobile">
+            <img src="images/image-product-1.jpg" />
+          </div>
+          <div class="slide-mobile">
+            <img src="images/image-product-2.jpg" />
+          </div>
+          <div class="slide-mobile">
+            <img src="images/image-product-3.jpg" />
+          </div>
+          <div class="slide-mobile">
+            <img src="images/image-product-4.jpg" />
+          </div>
+          <!-- Mobile BTN -->
+          <button class="slider__btn slider__btn--left">
+            <img src="images/icon-previous.svg" />
+          </button>
+          <button class="slider__btn slider__btn--right">
+            <img src="images/icon-next.svg" />
+          </button>
+        </div>
+      </section>
+
+      <div class="info-container">
+        <p class="info-headband">SNEAKER COMPANY</p>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <span class="info-text">
+          These low-profile sneakers are your perfect casual wear companion.
+          Featuring a durable rubber outer sole, they’ll withstand everything
+          the weather can offer.
+        </span>
+        <strong class="current-price">$125.00</strong>
+        <p class="before-price">$250.00</p>
+        <span class="hr-lines"></span>
+        <div class="cta">
+          <div class="cta-box">
+            <img src="images/icon-minus.svg" alt="minus" class="minus" />
+            <span class="how-much-product">0</span>
+            <img src="images/icon-plus.svg" alt="minus" class="plus" />
+          </div>
+          <button class="btn-add">
+            <img src="images/icon-cart.svg" alt="cart-btn" />
+            <span class="btn-add-text">Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <div class="modal-slider hidden">
+      <!-- Modal Slider Head -->
+      <img src="images/icon-close.svg" class="close-modal" />
+      <swiper-container
+        style="
+          --swiper-navigation-color: var(--color-neutral-black);
+          --swiper-pagination-color: var(--color-neutral-black);
+        "
+        class="mySwiper modal-swiper-content"
+        thumbs-swiper=".mySwiper2"
+        space-between="10"
+        navigation="true"
+      >
+        <swiper-slide>
+          <img src="images/image-product-1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="images/image-product-4.jpg" />
+        </swiper-slide>
+      </swiper-container>
+      <!-- Modal Slider Bottom -->
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
