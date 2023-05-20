@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Todo app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="que.css">
+    <!-- <script defer src="script.js"></script> -->
+    <script defer src="script2.js"></script>
+  </head>
+  <body class="dark dark-body">
+    <section>
+      <header>
+        <h1 class="logo">TODO</h1>
+        <button class="mode-switcher">
+          <img
+            src="images/icon-moon.svg"
+            class="dark-mode"
+            alt="dark-mode-switch"
+          />
+          <img
+            src="images/icon-sun.svg"
+            class="light-mode"
+            alt="light-mode-switch"
+          />
+        </button>
+      </header>
+      <div class="new-todo">
+        <input type="checkbox" class="checkbox" />
+        <input
+          class="todo-input"
+          type="text"
+          placeholder="Create a new todo..."
+        />
+      </div>
+      <div class="container">
+        <div class="todo-container"></div>
+        <div class="todo-options">
+          <span class="items-counter">0 items left</span>
+          <ul class="options">
+            <li class="options all">All</li>
+            <li class="options active">Active</li>
+            <li class="options completed">Completed</li>
+          </ul>
+          <span class="options clear__completed">Clear Completed</span>
+        </div>
+      </div>
+      <span class="footer-text">Drag and drop to reorder list</span>
+    </section>
+  </body>
+</html>

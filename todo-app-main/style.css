@@ -1,0 +1,368 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Bright Blue: hsl(220, 98%, 61%)
+- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+
+### Neutral
+
+### Light Theme
+
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+
+### Dark Theme
+
+- Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 400, 700
+
+
+*/
+
+:root {
+  --dark-mode-text-color: hsl(236, 33%, 92%);
+  --dark-mode-color-bgc: hsl(235, 24%, 19%);
+  --light-mode-text-color: hsl(235, 21%, 11%);
+  --light-mode-color-bgc: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  backdrop-filter: calc(hsl(235, 19%, 35%), hsl(235, 19%, 35%));
+  /* background-size: cover; */
+  background-color: hsl(0, 0%, 98%);
+  font-family: "Josefin Sans", sans-serif;
+  background-position-x: center;
+}
+
+.dark-body {
+  background-image: url(images/bg-desktop-dark.jpg);
+  background-color: hsl(235, 21%, 11%);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10rem auto;
+  max-width: 70rem;
+  gap: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 20rem; */
+  width: 100%;
+}
+
+h1 {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 98%);
+  letter-spacing: 10px;
+}
+
+.dark-light-mode:hover {
+  cursor: pointer;
+}
+
+.new-todo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  gap: 1.2rem;
+  width: 100%;
+  padding: 1rem 1.4rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--light-mode-color-bgc);
+}
+
+.dark .new-todo {
+  background-color: var(--dark-mode-color-bgc);
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--light-mode-color-bgc);
+  margin: 0;
+  font: inherit;
+  color: var(--light-mode-color-bgc);
+  width: 25px;
+  height: 25px;
+  border: 1px solid hsl(233, 11%, 84%);
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  /* */
+  display: grid;
+  place-content: center;
+}
+
+.dark input[type="checkbox"] {
+  background-color: var(--dark-mode-color-bgc);
+  color: var(--dark-mode-color-bgc);
+  border-color: hsl(235, 19%, 35%);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(images/icon-check.svg);
+  /* background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%)); */
+  background-image: -moz-linear-gradient();
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  background-color: hsl(280, 87%, 65%);
+}
+
+input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.todo-input {
+  height: 4rem;
+  color: var(--light-mode-text-color);
+  background-color: var(--light-mode-color-bgc);
+  font-family: inherit;
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+
+.dark .todo-input {
+  color: var(--dark-mode-text-color);
+  background-color: var(--dark-mode-color-bgc);
+}
+
+.todo-input::placeholder {
+  color: hsl(236, 9%, 61%);
+}
+
+.dark .todo-input::placeholder {
+  color: hsl(233, 14%, 35%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  border-radius: 3px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.dark .container {
+  background-color: hsl(235, 24%, 19%);
+}
+
+/* js TODOS */
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.todo {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid hsl(233, 11%, 84%);
+  padding: 1.8rem 1.4rem;
+  gap: 1rem;
+}
+
+.dark .todo {
+  border-color: hsl(235, 19%, 35%);
+}
+
+.todo-checkbox:hover {
+  background: linear-gradient();
+}
+
+.todo-text {
+  color: var(--light-mode-text-color);
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.dark .todo-text {
+  color: var(--dark-mode-text-color);
+}
+
+.delete-todo {
+  margin-left: auto;
+}
+
+.delete-todo {
+  cursor: pointer;
+}
+
+.todo-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 1.4rem 2rem;
+  gap: 2rem;
+  font-size: 1.4rem;
+  color: hsl(236, 9%, 61%);
+}
+
+.dark .todo-options {
+  color: hsl(234, 11%, 52%);
+}
+
+.options {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.all {
+  color: hsl(220, 98%, 61%);
+}
+
+.clear__completed:hover,
+.options :hover {
+  transition: all 0.3s;
+  color: var(--light-mode-text-color);
+}
+
+.dark .clear__completed:hover,
+.dark .options :hover {
+  transition: all 0.3s;
+  color: hsl(0, 0%, 98%);
+}
+.footer-text {
+  margin-top: 2rem;
+}
+
+.dark .footer-text {
+  font-size: 1.4rem;
+  color: hsl(234, 11%, 52%);
+}
+
+.footer-text {
+  font-size: 1.4rem;
+  color: hsl(236, 9%, 61%);
+}
+
+.todo-completed {
+  position: relative;
+  color: hsl(233, 11%, 84%);
+}
+
+.todo-completed::after {
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  background-color: hsl(233, 11%, 84%);
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transition: all 0.3s;
+}
+
+.dark .todo-completed {
+  color: hsl(234, 11%, 52%);
+}
+.dark .todo-completed::after {
+  background-color: hsl(234, 11%, 52%);
+}
+/*SWITCHER  */
+
+.mode-switcher {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.dark .dark-mode {
+  display: none;
+}
+
+.light-mode {
+  display: none;
+}
+
+.dark .light-mode {
+  display: block;
+}
+
+.light-bg {
+  color: hsl(235, 21%, 11%);
+  background-color: hsl(0, 0%, 98%);
+}
+
+.new-todo {
+}
+/* 
+-FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */

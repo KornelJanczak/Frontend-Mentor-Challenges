@@ -1,0 +1,12 @@
+@media (max-width: 24em) {
+  section {
+    margin: 9rem auto;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  .todo-options {
+    font-size: 1.2rem;
+  }
+}
