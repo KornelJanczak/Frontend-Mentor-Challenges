@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Interactive comments section</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <section class="container">
+        <div class="msg-and-reply-content">
+          <div class="message-container">
+            <div class="plus-minus">
+              <img src="images/icon-plus.svg" alt="plus" />
+              <span class="plus-minus--counter">12</span>
+              <img src="images/icon-minus.svg" alt="minus" />
+            </div>
+            <div class="msg">
+              <div class="msg-owner">
+                <img
+                  src="/images/avatars/image-amyrobson.png"
+                  alt="owner"
+                  class="img-owner"
+                />
+                <strong class="username">amyrobson</strong>
+                <span class="created-at">1 month ago</span>
+                <button class="reply-btn">
+                  <img src="images/icon-reply.svg" />
+                  Reply
+                </button>
+              </div>
+              <div class="msg-content">
+                <p class="msg-text">
+                  Impressive! Though it seems the drag feature could be
+                  improved. But overall it looks incredible. You've nailed the
+                  design and the responsiveness at various breakpoints works
+                  really well.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="
+          <div class="reply-box">
+            ">
+            <div class="line-box">
+              <div class="vertical-line"></div>
+            </div>
+            <div class="message-container reply">
+              <div class="plus-minus">
+                <img src="images/icon-plus.svg" alt="plus" />
+                <span class="plus-minus--counter">12</span>
+                <img src="images/icon-minus.svg" alt="minus" />
+              </div>
+              <div class="msg">
+                <div class="msg-owner">
+                  <img
+                    src="/images/avatars/image-amyrobson.png"
+                    alt="owner"
+                    class="img-owner"
+                  />
+                  <strong class="username">amyrobson</strong>
+                  <span class="created-at">1 month ago</span>
+                  <button class="reply-btn">
+                    <img src="images/icon-reply.svg" />
+                    Reply
+                  </button>
+                </div>
+                <div class="msg-content">
+                  <p class="msg-text">
+                    Impressive! Though it seems the drag feature could be
+                    improved. But overall it looks incredible. You've nailed the
+                    design and the responsiveness at various breakpoints works
+                    really well.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <form class="write-msg reply-mobile">
+        <img
+          src="images/avatars/image-juliusomo.png"
+          class="juliusomo"
+          alt="juliusomo"
+        />
+        <input
+          type="text"
+          class="add-comment input"
+          placeholder="Add a comment..."
+        />
+        <!-- <textarea
+          rows="5"
+          cols="20"
+          placeholder="Add a comment..."
+          class="add-comment"
+        >
+        </textarea> -->
+        <button class="send-msg">SEND</button>
+      </form>
+    </main>
+    <div class="modal hidde">
+      <p class="modal-header">Delete comment</p>
+      <span class="modal-text"
+        >Are you sure you want delete this comment? This will remove comment and
+        can't be undone</span
+      >
+      <ul class="modal-list">
+        <button class="btn-cancel">NO, CANCEL</button>
+        <button class="btn-delete">YES, DELETE</button>
+      </ul>
+    </div>
+    <div class="overlay hidde"></div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Kornel Janczak</a>.
+    </div>
+  </body>
+</html>
+
+
