@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+
+    <title>Frontend Mentor | Job Listings</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="active-filter hidde">
+          <ul class="filter-list"></ul>
+          <button class="clear-btn">Clear</button>
+        </div>
+      </header>
+      <section>
+        <div class="job-list">
+          <div class="job-box">
+            <div class="info-box">
+              <img src="images/photosnap.svg" class="job-logo" alt="job-logo" />
+              <div class="content">
+                <div class="company-name">Photosnap</div>
+                <div class="work-name">Senior Frontend Developer</div>
+                <ul class="ul-basic-info">
+                  <li class="how-long-ago">1d ago</li>
+                  <li class="work-time">Full time</li>
+                  <li class="place">USA only</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Tech Stack -->
+            <ul class="ul-tech-stack">
+              <li class="li-tech-item">Frontend</li>
+              <li class="li-tech-item">Senior</li>
+              <li class="li-tech-item">HTML</li>
+              <li class="li-tech-item">CSS</li>
+              <li class="li-tech-item">JavaScript</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Kornel Janczak</a>.
+      </div>
+    </main>
+  </body>
+</html>

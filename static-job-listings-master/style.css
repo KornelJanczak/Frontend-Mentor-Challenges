@@ -1,0 +1,331 @@
+/* ~
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Desaturated Dark Cyan: hsl(180, 29%, 50%)
+
+### Neutral
+
+- Light Grayish Cyan (Background): hsl(180, 52%, 96%)
+- Light Grayish Cyan (Filter Tablets): hsl(180, 31%, 95%)
+- Dark Grayish Cyan: hsl(180, 8%, 52%)
+- Very Dark Grayish Cyan: hsl(180, 14%, 20%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Headings
+
+- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
+- Weights: 500, 700
+ */
+
+:root {
+  --primary: hsl(180, 29%, 50%);
+  --bgc: hsl(180, 52%, 96%);
+  --filter-tablets: hsl(180, 31%, 95%);
+  --dark-cyan: hsl(180, 8%, 52%);
+  --very-dark-cyan: hsl(180, 14%, 20%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-size: 1.1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 4rem;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgc);
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  background-image: url("images/bg-header-desktop.svg");
+  background-color: var(--primary);
+}
+
+section {
+  background-color: var(--bgc);
+  height: 100%;
+  padding-top: 4.4rem;
+  padding-bottom: 3.6rem;
+}
+
+.active-filter {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  min-width: 60rem;
+  height: auto;
+  padding: 2rem 1.4rem 2rem 1.4rem;
+  margin-bottom: 4.4rem;
+  background-color: #ffff;
+  box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, 0.05);
+  gap: 2rem;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 11px;
+}
+
+.filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 1rem;
+}
+
+.hidde {
+  display: none;
+}
+
+.clear-btn {
+  margin-left: auto;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 4px;
+  border-bottom-color: #ffff;
+  font-family: unset;
+}
+
+.clear-btn:hover {
+  border-bottom-color: var(--primary);
+}
+
+.delete-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  height: 2rem;
+  width: 1.5rem;
+  border: none;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+}
+
+.filter-tag {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  padding: 0rem !important;
+  padding-left: 0.5rem !important;
+  border-radius: 4px;
+}
+
+.filtr-span {
+  font-weight: 600;
+}
+
+.job-list {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  gap: 2rem;
+  /* background-color: inherit; */
+}
+
+.job-box {
+  display: flex;
+  gap: 8rem;
+  background-color: #ffff;
+  padding: 1.2rem;
+  min-width: 60rem;
+  box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 11px;
+  border-left: 4px;
+  border-style: solid;
+  border-color: #ffff;
+}
+
+.job-box:hover {
+  cursor: pointer;
+  border-left-color: var(--primary);
+}
+
+.info-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.ul-tech-stack {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  align-items: center;
+  margin-left: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.company-name {
+  color: var(--primary);
+}
+
+.new-tag,
+.featured-tag {
+  color: #ffff;
+  font-size: 12px;
+  padding: 0.2rem;
+  background-color: var(--primary);
+  border-radius: 25px;
+}
+
+.featured-tag {
+  color: #ffff;
+  background-color: #222;
+}
+
+.work-name {
+  font-weight: 600;
+  font-family: unset;
+}
+
+.work-name:hover {
+  color: var(--primary);
+  transition: all 0.2s;
+}
+
+.ul-basic-info {
+  display: flex;
+  list-style-position: inside;
+  gap: 0.7rem;
+}
+
+.ul-basic-info:first-child {
+  list-style: none;
+}
+
+.ul-basic-info li {
+  color: var(--dark-cyan);
+  white-space: nowrap;
+}
+
+.posted-at {
+  list-style: none;
+}
+
+.li-tech-item {
+  gap: 0.5rem;
+  color: var(--primary);
+  background-color: var(--filter-tablets);
+  border-radius: 4px;
+  padding: 0.5rem;
+  margin-left: auto;
+}
+
+.li-tech-item:hover {
+  background-color: var(--primary);
+  color: var(--filter-tablets);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* 
+//////////////////
+MOBILE
+//////////////////
+ */
+@media (max-width: 23.5em) {
+  header {
+    background-image: url("images/bg-header-mobile.svg");
+  }
+  main {
+  }
+
+  .job-list {
+    gap: 4rem;
+  }
+
+  .job-box {
+    position: relative;
+    flex-direction: column;
+    min-width: 100%;
+    max-width: 100%;
+    padding-top: 3rem;
+    gap: 1rem;
+  }
+
+  .job-logo {
+    position: absolute;
+    top: -17%;
+    width: 75px;
+    height: 75px;
+  }
+
+  .ul-tech-stack {
+    margin-left: 0;
+    flex-wrap: wrap;
+  }
+
+  .li-tech-item {
+    margin-left: 0;
+    font-size: 0.9rem;
+  }
+
+  .filter-tag {
+    height: auto;
+  }
+
+  .filter-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .active-filter {
+    height: auto;
+    top: 67%;
+    padding: 1.4rem;
+    min-width: 90%;
+    max-width: 16rem;
+  }
+
+  .ul-basic-info li {
+    font-size: 0.9rem;
+  }
+}
